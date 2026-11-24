@@ -1,0 +1,618 @@
+:root {
+    --rosa: #FFD0DB;
+    --marrom: #4E2C13;
+    --verde: #BFD8B8;
+    --verde-musgo: #78866B;
+    --verde-claro: #DCE8D3;
+    --amarelo: #F9E6A8;
+    --creme: #FFFAEB;
+    --branco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--creme);
+    color: var(--marrom);
+}
+
+header {
+    background-color: var(--marrom);
+    color: var(--creme);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--creme);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--rosa);
+}
+
+/* INICIO */
+
+.banner {
+    min-height: 350px;
+    background-image: url("../img/cafeteria-fundo.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.banner h2 {
+    color: var(--branco);
+    font-size: 40px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.banner p {
+    color: var(--branco);
+    margin-top: 15px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.produto {
+    background-color: var(--branco);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.produto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.produto h3 {
+    margin: 15px 0;
+}
+
+.produto p {
+    margin-bottom: 12px;
+}
+
+button {
+    background-color: var(--verde-musgo);
+    color: var(--branco);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--marrom);
+}
+
+/* LOGIN */
+
+.pagina-login {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 80vh;
+    margin: 0 auto;
+    padding: 35px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.login-imagem {
+    width: 58%;
+    height: 440px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    flex-shrink: 1;
+}
+
+.login-imagem img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.login-texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    color: var(--branco);
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.75)
+    );
+}
+
+.login-texto h2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.login-texto p {
+    font-size: 15px;
+}
+
+.login-conteudo {
+    width: 390px;
+    min-height: 420px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.login-conteudo form {
+    width: 100%;
+    min-height: 420px;
+    background-color: var(--verde);
+    padding: 35px;
+    border-radius: 15px;
+}
+
+.login-conteudo h2 {
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 26px;
+}
+
+.subtitulo-login {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.login-conteudo label {
+    display: block;
+    margin: 15px 0 8px;
+    font-weight: bold;
+}
+
+.login-conteudo input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--verde-musgo);
+    border-radius: 7px;
+    background-color: var(--branco);
+    outline: none;
+}
+
+.login-conteudo input:focus {
+    border: 2px solid var(--verde-musgo);
+}
+
+.esqueci-senha {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.login-conteudo a {
+    color: var(--marrom);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-conteudo a:hover {
+    text-decoration: underline;
+}
+
+.login-conteudo button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.login-conteudo #mensagem {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.cadastro-login {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+/* CADASTRO */
+
+body:has(.pagina-formulario) {
+    background-color: var(--creme);
+    background-image: url("../img/tela-cadastro.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.pagina-formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 30px 20px;
+}
+
+.pagina-formulario form {
+    width: 350px;
+    background-color: rgba(255, 250, 235, 0.97);
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid var(--verde-claro);
+}
+
+.pagina-formulario h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.texto-cadastro {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.pagina-formulario label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.pagina-formulario input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--verde-musgo);
+    border-radius: 7px;
+}
+
+.pagina-formulario button {
+    width: 100%;
+    margin-top: 18px;
+}
+
+.pagina-formulario #mensagem {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.link-login {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.link-login a {
+    color: var(--verde-musgo);
+    text-decoration: none;
+}
+
+/* RODAPE */
+
+footer {
+    background-color: var(--marrom);
+    color: var(--creme);
+    text-align: center;
+    padding: 20px;
+}
+
+/* CELULAR E TABLET */
+
+@media (max-width: 850px) {
+    .pagina-login {
+        flex-direction: column;
+        padding: 25px 15px;
+    }
+
+    .login-imagem {
+        width: 100%;
+        max-width: 500px;
+        height: 280px;
+    }
+
+    .login-conteudo {
+        width: 100%;
+        max-width: 450px;
+        min-height: auto;
+    }
+
+    .login-conteudo form {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .banner {
+        min-height: 280px;
+    }
+
+    .banner h2 {
+        font-size: 28px;
+    }
+
+    .pagina-formulario {
+        min-height: 80vh;
+        padding: 25px 15px;
+    }
+
+    .pagina-formulario form {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 400px) {
+    .login-conteudo form {
+        padding: 25px 20px;
+    }
+
+    .pagina-formulario form {
+        padding: 22px 18px;
+    }
+}
+
+.foto-cafe {
+    width: 100%;
+    height: 180px;
+    background-image: url("../img/gatinhos-cafe.jpg");
+    background-repeat: no-repeat;
+    background-size: 400% 300%;
+    border-radius: 12px;
+}
+
+.gato1 { background-position: 0% 0%; }
+.gato2 { background-position: 33.33% 0%; }
+.gato3 { background-position: 66.66% 0%; }
+.gato4 { background-position: 100% 0%; }
+
+.gato5 { background-position: 0% 50%; }
+.gato6 { background-position: 33.33% 50%; }
+.gato7 { background-position: 66.66% 50%; }
+.gato8 { background-position: 100% 50%; }
+
+.gato9 { background-position: 0% 100%; }
+.gato10 { background-position: 33.33% 100%; }
+.gato11 { background-position: 66.66% 100%; }
+.gato12 { background-position: 100% 100%; }
+
+/* CARDAPIO DE BEBIDAS */
+
+.titulo-bebidas {
+    text-align: center;
+    padding: 35px 20px 20px;
+}
+
+.titulo-bebidas h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.titulo-bebidas p {
+    font-size: 16px;
+}
+
+/* CATEGORIAS */
+
+.categorias-bebidas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px 20px 30px;
+}
+
+.categorias-bebidas a {
+    background-color: var(--verde);
+    color: var(--marrom);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 11px 22px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.categorias-bebidas a:hover {
+    background-color: var(--rosa);
+    transform: translateY(-2px);
+}
+
+/* SECOES DE BEBIDAS */
+
+.lista-bebidas {
+    max-width: 1150px;
+    margin: auto;
+    padding: 25px 25px 40px;
+    scroll-margin-top: 20px;
+}
+
+.lista-bebidas h2 {
+    font-size: 25px;
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--verde);
+}
+
+/* GRADE DOS PRODUTOS */
+
+.grade-bebidas {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* CARDS */
+
+.bebida-card {
+    background-color: var(--branco);
+    border: 1px solid var(--verde-claro);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.bebida-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(78, 44, 19, 0.12);
+}
+
+/* IMAGENS DOS GATINHOS */
+
+.foto-cafe {
+    width: 100%;
+    height: 125px;
+    background-image: url("../img/gatinhos-cafe.jpg");
+    background-repeat: no-repeat;
+    background-size: 400% 300%;
+}
+
+/* INFORMACOES */
+
+.bebida-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.bebida-info h3 {
+    font-size: 17px;
+    margin-bottom: 9px;
+}
+
+.bebida-info p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    flex: 1;
+}
+
+.bebida-info strong {
+    color: var(--verde-musgo);
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.bebida-info button {
+    width: 100%;
+    padding: 10px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .grade-bebidas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 550px) {
+    .titulo-bebidas {
+        padding: 25px 15px 15px;
+    }
+
+    .titulo-bebidas h2 {
+        font-size: 24px;
+    }
+
+    .categorias-bebidas {
+        gap: 8px;
+        padding: 12px 12px 25px;
+    }
+
+    .categorias-bebidas a {
+        padding: 9px 15px;
+        font-size: 13px;
+    }
+
+    .lista-bebidas {
+        padding: 20px 15px 30px;
+    }
+
+    .lista-bebidas h2 {
+        font-size: 21px;
+    }
+
+    .grade-bebidas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .foto-cafe {
+        height: 105px;
+    }
+
+    .bebida-info {
+        padding: 11px;
+    }
+
+    .bebida-info h3 {
+        font-size: 14px;
+    }
+
+    .bebida-info p {
+        font-size: 12px;
+    }
+
+    .bebida-info strong {
+        font-size: 14px;
+    }
+
+    .bebida-info button {
+        padding: 9px 5px;
+        font-size: 12px;
+    }
+}
